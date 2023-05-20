@@ -1,21 +1,18 @@
+
 using System;
 using System.Collections.Generic;
 
 public class TodoList
 {
-    private List<TodoItem> items;
+    private List<TodoItem> items = new List<TodoItem>();
 
-    public TodoList()
+    public void Add(string description)
     {
-        items = new List<TodoItem>();
+        TodoItem item = new TodoItem(description);
+        items.Add(item);
     }
 
-    public void AddItem(string description)
-    {
-        items.Add(new TodoItem(description));
-    }
-
-    public void RemoveItem(int index)
+    public void Remove(int index)
     {
         if (index >= 0 && index < items.Count)
         {
@@ -23,7 +20,7 @@ public class TodoList
         }
     }
 
-    public void MarkItemAsCompleted(int index)
+    public void Finish(int index)
     {
         if (index >= 0 && index < items.Count)
         {
@@ -31,7 +28,7 @@ public class TodoList
         }
     }
 
-    public void MarkItemAsNotCompleted(int index)
+    public void Undo(int index)
     {
         if (index >= 0 && index < items.Count)
         {
@@ -39,7 +36,7 @@ public class TodoList
         }
     }
 
-    public void EditItemDescription(int index, string newDescription)
+    public void Edit(int index, string newDescription)
     {
         if (index >= 0 && index < items.Count)
         {
@@ -47,13 +44,12 @@ public class TodoList
         }
     }
 
-    public void DisplayItems()
+    public void Display()
     {
         for (int i = 0; i < items.Count; i++)
         {
             string status = items[i].IsCompleted ? "Completed" : "Not Completed";
             Console.WriteLine($"{i + 1}. {items[i].Description} - {status}");
         }
-        // Console.WriteLine("---");
     }
 }
