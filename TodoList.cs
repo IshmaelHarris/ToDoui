@@ -47,13 +47,13 @@ public class TodoList
         }
     }
 
-//     public void DisplayItems()
-//     {
-//         for (int i = 0; i < items.Count; i++)
-//         {
-//             string status = items[i].IsCompleted ? "Completed" : "Not Completed";
-//             Console.WriteLine($"{i + 1}. {items[i].Description} - {status}");
-//         }
-//         Console.WriteLine("---");
-//     }
+    public void DisplayItems()
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            string status = items[i].IsCompleted ? "Completed" : "Not Completed";
+            Console.WriteLine($"{i + 1}. {items[i].Description} - {status}");
+        }
+        // Console.WriteLine("---");
+    }
 }

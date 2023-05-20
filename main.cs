@@ -9,7 +9,9 @@ class Program
         while (true)
 
         {
+            Console.WriteLine("---");
             todoList.DisplayItems();
+            Console.WriteLine("---");
 
             Console.WriteLine("1. Add item");
             Console.WriteLine("2. Remove item");
@@ -27,25 +29,25 @@ class Program
                     Console.WriteLine("Enter the description of the new item:");
                     string description = Console.ReadLine();
                     todoList.AddItem(description);
-                    todoList.DisplayItems();
+
                     break;
                 case "2":
                     Console.WriteLine("Enter the index of the item to remove:");
                     int indexToRemove = int.Parse(Console.ReadLine()) - 1;
                     todoList.RemoveItem(indexToRemove);
-                    todoList.DisplayItems();
+
                     break;
                 case "3":
                     Console.WriteLine("Enter the index of the item to mark as completed:");
                     int indexToMarkAsCompleted = int.Parse(Console.ReadLine()) - 1;
                     todoList.MarkItemAsCompleted(indexToMarkAsCompleted);
-                    todoList.DisplayItems();
+
                     break;
                 case "4":
                     Console.WriteLine("Enter the index of the item to mark as not completed:");
                     int indexToMarkAsNotCompleted = int.Parse(Console.ReadLine()) - 1;
                     todoList.MarkItemAsNotCompleted(indexToMarkAsNotCompleted);
-                    todoList.DisplayItems();
+
                     break;
                 case "5":
                     Console.WriteLine("Enter the index of the item to edit:");
@@ -53,10 +55,10 @@ class Program
                     Console.WriteLine("Enter the new description for the item:");
                     string newDescription = Console.ReadLine();
                     todoList.EditItemDescription(indexToEdit, newDescription);
-                    todoList.DisplayItems();
+
                     break;
                 case "6":
-                    todoList.DisplayItems();
+
                     break;
                 case "7":
                     return;
