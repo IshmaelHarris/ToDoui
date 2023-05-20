@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/runner/ToDoey-1/main.csproj": {}
+    "/home/runner/ToDoui/main.csproj": {}
   },
   "projects": {
-    "/home/runner/ToDoey-1/main.csproj": {
+    "/home/runner/ToDoui/main.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/runner/ToDoey-1/main.csproj",
+        "projectUniqueName": "/home/runner/ToDoui/main.csproj",
         "projectName": "main",
-        "projectPath": "/home/runner/ToDoey-1/main.csproj",
+        "projectPath": "/home/runner/ToDoui/main.csproj",
         "packagesPath": "/home/runner/.nuget/packages/",
-        "outputPath": "/home/runner/ToDoey-1/obj/",
+        "outputPath": "/home/runner/ToDoui/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/runner/.nuget/NuGet/NuGet.Config"

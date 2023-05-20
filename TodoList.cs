@@ -31,12 +31,29 @@ public class TodoList
         }
     }
 
-    public void DisplayItems()
+    public void MarkItemAsNotCompleted(int index)
     {
-        for (int i = 0; i < items.Count; i++)
+        if (index >= 0 && index < items.Count)
         {
-            string status = items[i].IsCompleted ? "Completed" : "Not Completed";
-            Console.WriteLine($"{i+1}. {items[i].Description} - {status}");
+            items[index].IsCompleted = false;
         }
     }
+
+    public void EditItemDescription(int index, string newDescription)
+    {
+        if (index >= 0 && index < items.Count)
+        {
+            items[index].Description = newDescription;
+        }
+    }
+
+//     public void DisplayItems()
+//     {
+//         for (int i = 0; i < items.Count; i++)
+//         {
+//             string status = items[i].IsCompleted ? "Completed" : "Not Completed";
+//             Console.WriteLine($"{i + 1}. {items[i].Description} - {status}");
+//         }
+//         Console.WriteLine("---");
+//     }
 }
