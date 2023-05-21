@@ -48,8 +48,8 @@ public class TodoList
     {
         for (int i = 0; i < items.Count; i++)
         {
-            string status = items[i].IsCompleted ? "Completed" : "Not Completed";
-            Console.WriteLine($"{i + 1}. {items[i].Description} - {status}");
+            // string status = items[i].IsCompleted ? "Completed" : "Not Completed";
+            Console.WriteLine($"- {items[i].Description}");
         }
     }
 }

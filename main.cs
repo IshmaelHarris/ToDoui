@@ -14,12 +14,12 @@ class Program
           // make it say "Begin Your Journey" before there are any tasks and disappears after
             Console.WriteLine("---");
 
-            Console.WriteLine("/a - Add task");
-            Console.WriteLine("/r - Remove task");
-            Console.WriteLine("/f - Finish task");
-            Console.WriteLine("/u - Undo finish");
-            Console.WriteLine("/e - Edit task");
-            Console.WriteLine("/d - Display task");
+            Console.WriteLine("/a - Add");
+            Console.WriteLine("/r - Remove");
+            Console.WriteLine("/f - Finish");
+            Console.WriteLine("/u - Undo");
+            Console.WriteLine("/e - Edit/q");
+         
             Console.WriteLine("/q - Quit program");
 
             string input = Console.ReadLine();
@@ -53,9 +53,7 @@ class Program
                     string newDescription = Console.ReadLine();
                     todoList.Edit(indexToEdit, newDescription);
                     break;
-                case "/d":
-                    todoList.Display();
-                    break;
+               
                 case "/q":
                     return;
             }
